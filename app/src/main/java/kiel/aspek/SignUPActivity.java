@@ -39,8 +39,8 @@ public class SignUPActivity extends AppCompatActivity
 // TODO Auto-generated method stub
 
                 String userName=editTextUserName.getText().toString();
-                String NPM=editTextNPM.getText().toString();
-                int NPMnum= Integer.parseInt(NPM);
+                String NPMnum=editTextNPM.getText().toString();
+                //int NPMnum= Integer.parseInt(NPM);
                 String password=editTextPassword.getText().toString();
                 String confirmPassword=editTextConfirmPassword.getText().toString();
                 String email=editTextEmail.getText().toString();

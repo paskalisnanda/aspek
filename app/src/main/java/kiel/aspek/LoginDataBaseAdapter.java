@@ -11,10 +11,15 @@ public class LoginDataBaseAdapter
     static final String DATABASE_NAME = "login.db";
     static final int DATABASE_VERSION = 1;
     public static final int NAME_COLUMN = 1;
+    private static final String TABLE_LOGIN = "LOGIN";
+
+    // Login Table Columns names
+    private static final String KEY_ID = "id";
+
     // TODO: Create public field for each column in your table.
 // SQL Statement to create a new database.
-    static final String DATABASE_CREATE = "create table "+"LOGIN"+
-            "( " +"ID"+" integer primary key autoincrement,"+ "USERNAME text, NPMNUM int, PASSWORD text, EMAIL text); ";
+    static final String DATABASE_CREATE = "create table "+ TABLE_LOGIN +
+            "( " +KEY_ID+" integer primary key autoincrement,"+ "USERNAME text, NPM INT, PASSWORD text, EMAIL text);" ;
     // Variable to hold the database instance
     public SQLiteDatabase db;
     // Context of the application using the database.
@@ -41,7 +46,7 @@ public class LoginDataBaseAdapter
         return db;
     }
 
-    public void insertEntry(String userName,int NPMnum, String password, String email)
+    public void insertEntry(String userName,String NPMnum, String password, String email)
     {
         ContentValues newValues = new ContentValues();
 // Assign values for each row.
@@ -52,14 +57,14 @@ public class LoginDataBaseAdapter
 
 // Insert the row into your table
         db.insert("LOGIN", null, newValues);
-///Toast.makeText(context, "Reminder Is Successfully Saved", Toast.LENGTH_LONG).show();
+
     }
     public int deleteEntry(String UserName)
     {
-//String id=String.valueOf(ID);
+
         String where="USERNAME=?";
         int numberOFEntriesDeleted= db.delete("LOGIN", where, new String[]{UserName}) ;
-// Toast.makeText(context, "Number fo Entry Deleted Successfully : "+numberOFEntriesDeleted, Toast.LENGTH_LONG).show();
+
         return numberOFEntriesDeleted;
     }
     public String getSinlgeEntry(String userName)

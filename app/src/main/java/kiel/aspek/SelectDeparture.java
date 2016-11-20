@@ -1,9 +1,11 @@
 package kiel.aspek;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Spinner;
@@ -12,7 +14,8 @@ import java.util.List;
 import android.widget.ArrayAdapter;
 
 public class SelectDeparture extends AppCompatActivity implements OnItemSelectedListener{
-    @Override
+    //@Override
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_departure);
@@ -41,6 +44,7 @@ public class SelectDeparture extends AppCompatActivity implements OnItemSelected
         shelter.add("Wiramakara");
         shelter.add("Pau Danau");
         shelter.add("Balai Sidang");
+        //String[] shelter = getResources().getStringArray(R.array.Shelter);
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, shelter);
@@ -50,6 +54,8 @@ public class SelectDeparture extends AppCompatActivity implements OnItemSelected
 
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
+
+
     }
 
     @Override
@@ -62,5 +68,10 @@ public class SelectDeparture extends AppCompatActivity implements OnItemSelected
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
+    }
+
+    public void PilihHalte(View view) {
+        Intent intentPilihTujuan=new Intent(getApplicationContext(),SelectDestination.class);
+        startActivity(intentPilihTujuan);
     }
 }
