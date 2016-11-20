@@ -1,6 +1,25 @@
 <resources>
     <string name="app_name">aspek</string>
 
+    <string-array name="shelter">
+        <item>PAU</item>
+        <item>Perpustakaan</item>
+        <item>FIB</item>
+        <item>Masjid UI</item>
+        <item>FISIP</item>
+        <item>FEB</item>
+        <item>FT</item>
+        <item>Pusgiwa</item>
+        <item>FMIPA</item>
+        <item>FKM</item>
+        <item>Pondok Cina</item>
+        <item>Stasiun UI</item>
+        <item>Asrama</item>
+        <item>Wiramakara</item>
+        <item>PAU Danau</item>
+        <item>Balai Sidang</item>
+    </string-array>
+
 </resources>
 
 
