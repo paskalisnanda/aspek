@@ -19,7 +19,8 @@
         <activity android:name=".SelectDeparture" />
         <activity android:name=".SelectDestination" />
         <activity android:name=".OfficerMenu" />
-        <activity android:name=".InputBike"></activity>
+        <activity android:name=".InputBike" />
+        <activity android:name=".CountDown"></activity>
     </application>
 
 </manifest>

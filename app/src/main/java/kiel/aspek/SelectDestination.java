@@ -22,7 +22,7 @@ public class SelectDestination extends AppCompatActivity implements OnItemSelect
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_destination);
 
-        additemspinner1();
+
         // Spinner element
         Spinner spinner = (Spinner) findViewById(R.id.spinnerDestination);
 
@@ -99,12 +99,10 @@ public class SelectDestination extends AppCompatActivity implements OnItemSelect
 
     }
     public void SelesaiPilih(View view) {
-        Intent intentSelesaiPilih=new Intent(getApplicationContext(),MainActivity.class);
+        Intent intentSelesaiPilih=new Intent(getApplicationContext(),CountDown.class);
         startActivity(intentSelesaiPilih);
     }
-    public void additemspinner1(){
 
-    }
 }
 
 
