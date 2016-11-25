@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ql.aspek" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+  android:icon="@drawable/ic_launcher"
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+<android:theme="@android:style/Theme.AppCompat.NoActionBar">
+</manifest-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="info.androidhive.androidsplashscreentimer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <!-- Splash screen -->
+        <activity
+            android:name="com.example.ql.aspek.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main activity -->
+        <!--activity
+            android:name="info.androidhive.androidsplashscreentimer.MainActivity"
+            android:label="@string/app_name">
+        </activity-->
+    </application>
+
+</manifest>
