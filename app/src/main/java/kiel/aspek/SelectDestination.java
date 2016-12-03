@@ -15,12 +15,23 @@ import android.widget.ArrayAdapter;
 
 public class SelectDestination extends AppCompatActivity implements OnItemSelectedListener {
 
-    Button btnPilih;
+    String shelter, bike;
+    Intent intentPilihTujuan;
+    Bundle informasi ;
+    String userName ;
+    String password;
+    String asal;
 
     // @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_destination);
+
+        intentPilihTujuan = getIntent();
+        informasi = intentPilihTujuan.getExtras();
+        userName = informasi.getString("userName");
+        password = informasi.getString("password");
+        asal = informasi.getString("asal");
 
 
         // Spinner element
@@ -83,15 +94,41 @@ public class SelectDestination extends AppCompatActivity implements OnItemSelect
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
         spinner2.setAdapter(dataAdapter2);
+
+        /*
+        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+        List<String> NomorSepeda = db.GetNomorSepeda();
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, NomorSepeda);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinner2.setAdapter(dataAdapter2);
+         */
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        // On selecting a spinner item
-        String shelter = parent.getItemAtPosition(position).toString();
+        Spinner spinner = (Spinner) parent;
+        if(spinner.getId() == R.id.spinnerDestination)
+        {
+            // On selecting a spinner item
+            shelter = parent.getItemAtPosition(position).toString();
 
-        // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + shelter, Toast.LENGTH_LONG).show();
+            // Showing selected spinner item
+            Toast.makeText(parent.getContext(), "Selected: " + shelter, Toast.LENGTH_LONG).show();
+        }
+        else if(spinner.getId() == R.id.spinnerBike)
+        {
+            // On selecting a spinner item
+            bike = parent.getItemAtPosition(position).toString();
+
+            // Showing selected spinner item
+            Toast.makeText(parent.getContext(), "Selected: " + bike, Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
@@ -99,7 +136,13 @@ public class SelectDestination extends AppCompatActivity implements OnItemSelect
 
     }
     public void SelesaiPilih(View view) {
+        //loginDataBaseAdapter.insertEntry(asal,shelter,bike,npm);
         Intent intentSelesaiPilih=new Intent(getApplicationContext(),CountDown.class);
+        Bundle informasi = new Bundle();
+        informasi.putString("userName",userName);
+        informasi.putString("password",password);
+        informasi.putString("asal",asal);
+        intentSelesaiPilih.putExtras(informasi);
         startActivity(intentSelesaiPilih);
     }
 

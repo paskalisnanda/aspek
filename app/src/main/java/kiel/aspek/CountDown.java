@@ -8,21 +8,37 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.concurrent.TimeUnit;
 
 public class CountDown extends AppCompatActivity {
 
     CountDownTimer countdowntimer;
     Button buttonCancel;
     TextView textview;
+    Intent intentSelesaiPilih;
+    Bundle informasi ;
+    String userName ;
+    String password;
+    String asal;
+
+    private static final String FORMAT = "%02d:%02d:%02d";
+    int seconds , minutes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_count_down);
+
+        intentSelesaiPilih = getIntent();
+        informasi = intentSelesaiPilih.getExtras();
+        userName = informasi.getString("userName");
+        password = informasi.getString("password");
+        asal = informasi.getString("asal");
+
         buttonCancel = (Button)findViewById(R.id.CancelButton);
         textview = (TextView)findViewById(R.id.textView4);
 
-        countdowntimer = new CountDownTimerClass(1800000, 60000);
+        countdowntimer = new CountDownTimerClass(1800000, 1000);
         countdowntimer.start();
         buttonCancel.setOnClickListener(new View.OnClickListener() {
 
@@ -32,6 +48,11 @@ public class CountDown extends AppCompatActivity {
                 Toast toast = Toast.makeText (getApplicationContext(), "Pesanan Dibatalkan:", Toast.LENGTH_LONG);
                 toast.show();
                 Intent intentCancel=new Intent(getApplicationContext(),SelectDeparture.class);
+                Bundle informasi = new Bundle();
+                informasi.putString("userName",userName);
+                informasi.putString("password",password);
+                informasi.putString("asal",asal);
+                intentCancel.putExtras(informasi);
                 startActivity(intentCancel);
 
                 //tinggal masukin fungsi delete di sini
@@ -47,8 +68,14 @@ public class CountDown extends AppCompatActivity {
 
         @Override
         public void onTick(long millisUntilFinished) {
-            int progress = (int) (millisUntilFinished/1000);
-            textview.setText(Integer.toString(progress));
+            /*int progress = (int) (millisUntilFinished/1000);
+            textview.setText(Integer.toString(progress));*/
+            textview.setText(""+String.format(FORMAT,
+                    TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
+                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
+                            TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
+                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
+                            TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
 
         }
 

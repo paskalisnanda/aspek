@@ -20,7 +20,10 @@
         <activity android:name=".SelectDestination" />
         <activity android:name=".OfficerMenu" />
         <activity android:name=".InputBike" />
-        <activity android:name=".CountDown"></activity>
+        <activity android:name=".CountDown" />
+        <activity android:name=".LoginStudent" />
+        <activity android:name=".LoginOfficer" />
+        <activity android:name=".user_manual"></activity>
     </application>
 
 </manifest>

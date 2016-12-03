@@ -13,13 +13,23 @@ import java.util.ArrayList;
 import java.util.List;
 import android.widget.ArrayAdapter;
 
+
 public class SelectDeparture extends AppCompatActivity implements OnItemSelectedListener{
     //@Override
+    String shelter;
+    Intent LoginStudent;
+    Bundle loginInfo;
+    String userName;
+    String password;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_departure);
 
+        LoginStudent = getIntent();
+        loginInfo = LoginStudent.getExtras();
+        userName = loginInfo.getString("userName");
+        password = loginInfo.getString("password");
         // Spinner element
         Spinner spinner = (Spinner) findViewById(R.id.spinnerDeparture);
 
@@ -54,14 +64,12 @@ public class SelectDeparture extends AppCompatActivity implements OnItemSelected
 
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
-
-
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // On selecting a spinner item
-        String shelter = parent.getItemAtPosition(position).toString();
+        shelter = parent.getItemAtPosition(position).toString();
 
         // Showing selected spinner item
         Toast.makeText(parent.getContext(), "Selected: " + shelter, Toast.LENGTH_LONG).show();
@@ -72,6 +80,12 @@ public class SelectDeparture extends AppCompatActivity implements OnItemSelected
 
     public void PilihHalte(View view) {
         Intent intentPilihTujuan=new Intent(getApplicationContext(),SelectDestination.class);
+        Bundle informasi = new Bundle();
+        informasi.putString("userName",userName);
+        informasi.putString("password",password);
+        informasi.putString("asal",shelter);
+        intentPilihTujuan.putExtras(informasi);
         startActivity(intentPilihTujuan);
+
     }
 }

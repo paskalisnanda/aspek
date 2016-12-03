@@ -21,24 +21,14 @@
         android:onClick="InputBike" />
 
     <Button
-        android:text="Receive Bike"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/InputBike"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:id="@+id/ReceiveBike"
-        android:onClick="ReceiveBike" />
-
-    <Button
         android:text="Accept Bike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="39dp"
         android:id="@+id/AcceptBike"
-        android:layout_below="@+id/ReceiveBike"
-        android:layout_alignRight="@+id/ReceiveBike"
-        android:layout_alignEnd="@+id/ReceiveBike"
-        android:onClick="AcceptBike" />
+        android:onClick="AcceptBike"
+        android:layout_below="@+id/InputBike"
+        android:layout_alignLeft="@+id/InputBike"
+        android:layout_alignStart="@+id/InputBike" />
 
 </RelativeLayout>

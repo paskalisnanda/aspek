@@ -42,7 +42,7 @@ public class OfficerMenu extends AppCompatActivity {
                 /*if(scanContent.equals(storedNPM))
                 {
                     Toast.makeText(MainActivity.this, "Congrats: Borrowing succesfull", Toast.LENGTH_LONG).show();
-                    dialog.dismiss();
+                    toast.show();
                     Intent Officermenu=new Intent(getApplicationContext(),Officermenu.class);
                     startActivity(Officermenu);
                 }*/
@@ -52,12 +52,6 @@ public class OfficerMenu extends AppCompatActivity {
             toast.show();
         }
     }
-
-
-    public void AcceptBike(View view) {
-        Intent intentAcceptBike=new Intent(getApplicationContext(),MainActivity.class);//masih ngaco
-        startActivity(intentAcceptBike);
-    } //bakal dibikin kaya input bike
 
 }
 

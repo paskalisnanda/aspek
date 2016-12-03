@@ -21,117 +21,6 @@
         android:inputType="text|number"
         android:layout_alignParentTop="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:id="@+id/Bike2"
-        android:inputType="text|number"
-        android:layout_below="@+id/Bike1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:id="@+id/Bike3"
-        android:inputType="text|number"
-        android:layout_below="@+id/Bike2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:id="@+id/Bike4"
-        android:inputType="text|number"
-        android:layout_below="@+id/Bike3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:id="@+id/Bike5"
-        android:inputType="text|number"
-        android:layout_below="@+id/Bike4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:id="@+id/Bike6"
-        android:inputType="text|number"
-        android:layout_below="@+id/Bike5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:id="@+id/Bike7"
-        android:inputType="text|number"
-        android:layout_below="@+id/Bike6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:id="@+id/Bike8"
-        android:inputType="text|number"
-        android:layout_below="@+id/Bike7"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:id="@+id/Bike9"
-        android:inputType="text|number"
-        android:layout_below="@+id/Bike8"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:id="@+id/Bike10"
-        android:inputType="text|number"
-        android:layout_below="@+id/Bike9"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text=" Input Again"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
-        android:id="@+id/InputAgain"
-        android:onClick="InputAgain" />
-
     <Button
         android:text="Done"
         android:layout_width="wrap_content"
@@ -141,5 +30,15 @@
         android:layout_toEndOf="@+id/Bike10"
         android:id="@+id/Done"
         android:onClick="Done" />
+
+    <Button
+        android:text=" Input Again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/InputAgain"
+        android:onClick="InputAgain"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/Bike1"
+        android:layout_toEndOf="@+id/Bike1" />
 
 </RelativeLayout>

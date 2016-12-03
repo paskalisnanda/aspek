@@ -18,6 +18,7 @@ public class InputBike extends AppCompatActivity {
     }
 
     public void InputAgain(View view) {
+        terimainput();
         Intent intentInputBike=new Intent(getApplicationContext(),InputBike.class);
         startActivity(intentInputBike);
     }
@@ -30,28 +31,8 @@ public class InputBike extends AppCompatActivity {
     public void terimainput(){
         EditText editTextBike1, editTextBike2,editTextBike3, editTextBike4, editTextBike5, editTextBike6, editTextBike7, editTextBike8, editTextBike9, editTextBike10;
         editTextBike1 =(EditText)findViewById(R.id.Bike1);
-        editTextBike2 =(EditText)findViewById(R.id.Bike2);
-        editTextBike3 =(EditText)findViewById(R.id.Bike3);
-        editTextBike4 =(EditText)findViewById(R.id.Bike4);
-        editTextBike5 =(EditText)findViewById(R.id.Bike5);
-        editTextBike6 =(EditText)findViewById(R.id.Bike6);
-        editTextBike7 =(EditText)findViewById(R.id.Bike7);
-        editTextBike8 =(EditText)findViewById(R.id.Bike8);
-        editTextBike9 =(EditText)findViewById(R.id.Bike9);
-        editTextBike10 =(EditText)findViewById(R.id.Bike10);
-
         String Bike1=editTextBike1.getText().toString();
-        String Bike2=editTextBike2.getText().toString();
-        String Bike3=editTextBike3.getText().toString();
-        String Bike4=editTextBike4.getText().toString();
-        String Bike5=editTextBike5.getText().toString();
-        String Bike6=editTextBike6.getText().toString();
-        String Bike7=editTextBike7.getText().toString();
-        String Bike8=editTextBike8.getText().toString();
-        String Bike9=editTextBike9.getText().toString();
-        String Bike10=editTextBike10.getText().toString();
 
         //loginDataBaseAdapter.insertEntry(Bike1, Bike2, Bike3, Bike4, Bike5, Bike6, Bike7, Bike8, Bike9, Bike10);
-
     }
 }
