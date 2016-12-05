@@ -22,7 +22,11 @@
 
         android:text="Sign In"
 
-        android:onClick="signIn"/>
+        android:onClick="signIn"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@android:color/background_light" />
 
 
 
@@ -34,7 +38,11 @@
 
         android:layout_height="wrap_content"
 
-        android:text="Sign Up" />
+        android:text="Sign Up"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@android:color/background_light" />
 
 
 

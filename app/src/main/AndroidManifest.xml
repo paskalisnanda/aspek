@@ -23,7 +23,9 @@
         <activity android:name=".CountDown" />
         <activity android:name=".LoginStudent" />
         <activity android:name=".LoginOfficer" />
-        <activity android:name=".user_manual"></activity>
+        <activity android:name=".user_manual" />
+        <activity android:name=".Receive_bike" />
+        <activity android:name=".SelectShelter"></activity>
     </application>
 
 </manifest>

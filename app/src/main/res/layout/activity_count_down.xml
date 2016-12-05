@@ -8,28 +8,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="kiel.aspek.CountDown">
+    tools:context="kiel.aspek.CountDown"
+    android:background="@android:color/holo_blue_dark">
 
     <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="80dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_marginTop="87dp"
         android:textSize="30sp"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="?android:attr/textColorPrimaryInverse" />
 
     <Button
         android:text="CANCEL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="77dp"
-        android:id="@+id/CancelButton" />
+        android:id="@+id/CancelButton"
+        android:layout_marginBottom="37dp"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

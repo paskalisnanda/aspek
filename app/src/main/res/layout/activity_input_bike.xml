@@ -8,18 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="kiel.aspek.InputBike">
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
-        android:ems="10"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/Bike1"
-        android:inputType="text|number"
-        android:layout_alignParentTop="true" />
+    tools:context="kiel.aspek.InputBike"
+    android:background="@android:color/holo_blue_bright">
 
     <Button
         android:text="Done"
@@ -29,7 +19,8 @@
         android:layout_toRightOf="@+id/Bike10"
         android:layout_toEndOf="@+id/Bike10"
         android:id="@+id/Done"
-        android:onClick="Done" />
+        android:onClick="Done"
+        android:background="@color/colorPrimaryDark" />
 
     <Button
         android:text=" Input Again"
@@ -38,7 +29,23 @@
         android:id="@+id/InputAgain"
         android:onClick="InputAgain"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/Bike1"
-        android:layout_toEndOf="@+id/Bike1" />
+        android:layout_toEndOf="@+id/Bike1"
+        android:background="@color/colorPrimaryDark" />
+
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Nomor Sepeda"
+        android:ems="10"
+        android:id="@+id/Bike1"
+        android:inputType="text|number"
+        android:layout_marginTop="93dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="81dp"
+        android:layout_marginStart="81dp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
 
 </RelativeLayout>

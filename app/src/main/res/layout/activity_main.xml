@@ -1,15 +1,16 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
 
+    android:gravity="center_vertical"
+    android:weightSum="1"
     android:orientation="vertical"
-
-    android:gravity="center_vertical" >
-
+    android:background="@color/colorPrimaryDark">
 
 
     <Button
@@ -22,8 +23,14 @@
 
         android:text="Officer"
 
-        />
-
+        android:background="@color/colorPrimaryDark"
+        android:layout_above="@+id/buttonStudent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="21dp"
+        android:textSize="30sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="normal|bold" />
 
     <Button
 
@@ -33,13 +40,29 @@
 
         android:layout_height="wrap_content"
 
-        android:text="Student" />
+        android:text="Student"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="66dp"
+        android:layout_alignBottom="@+id/buttonHelp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="normal|bold" />
 
     <Button
         android:text="HELP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonHelp" />
+        android:id="@+id/buttonHelp"
+        android:layout_marginBottom="33dp"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="normal|bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
-</LinearLayout>
+</RelativeLayout>

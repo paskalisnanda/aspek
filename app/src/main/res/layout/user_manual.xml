@@ -2,14 +2,17 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="1300dp"
     android:fillViewport="true"
-    android:foreground="@drawable/tampilan_help"
-    android:foregroundGravity="fill|bottom|top">
+    android:background="@drawable/tampilan_help"
+    android:foregroundGravity="fill|bottom|top"
+    tools:foreground="@drawable/tampilan_helpkecil">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:background="@android:color/background_light">
 
     </RelativeLayout>
 </ScrollView>
