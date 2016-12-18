@@ -44,7 +44,7 @@ public class Receive_bike extends AppCompatActivity implements View.OnClickListe
             Toast toast = Toast.makeText(this, "Content:" + scanContent, Toast.LENGTH_LONG);
             toast.show();
             contentTxt.setText("NPM Pengguna: " + scanContent);
-            if(scanContent.equals("1406565884"))
+            if(scanContent.equals("1406565884")||scanContent.equals("1406564042")||scanContent.equals("1406605370"))
             {
                 formatTxt.setText("Berhasil Meminjam");
             }

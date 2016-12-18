@@ -25,7 +25,9 @@
         <activity android:name=".LoginOfficer" />
         <activity android:name=".user_manual" />
         <activity android:name=".Receive_bike" />
-        <activity android:name=".SelectShelter"></activity>
+        <activity android:name=".SelectShelter" />
+        <activity android:name=".UserManual2" />
+        <activity android:name=".SplashScreen"></activity>
     </application>
 
 </manifest>

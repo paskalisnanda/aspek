@@ -20,7 +20,8 @@
         android:layout_toEndOf="@+id/Bike10"
         android:id="@+id/Done"
         android:onClick="Done"
-        android:background="@color/colorPrimaryDark" />
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
 
     <Button
         android:text=" Input Again"
@@ -30,12 +31,12 @@
         android:onClick="InputAgain"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/Bike1"
-        android:background="@color/colorPrimaryDark" />
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
 
     <EditText
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:text="Nomor Sepeda"
         android:ems="10"
         android:id="@+id/Bike1"
         android:inputType="text|number"
@@ -46,6 +47,7 @@
         android:layout_marginLeft="81dp"
         android:layout_marginStart="81dp"
         android:textColor="@android:color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:text="Nomor Sepeda" />
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
@@ -9,7 +10,7 @@
     android:orientation="vertical"
 
     android:gravity="center_vertical"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimaryDark">
 
 
     <Button
@@ -30,7 +31,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="62dp" />
+        android:layout_marginTop="350dp" />
 
     <Button
 
@@ -45,10 +46,36 @@
         android:textColor="@color/colorAccent"
         android:textStyle="normal|bold"
         android:textSize="24sp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="400dp"
         android:layout_below="@+id/buttonSignIN"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <TextView
+        android:text="USER ROLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="@color/colorAccent"
+        android:textAllCaps="true"
+        android:textStyle="normal|bold"
+        android:textSize="36sp"
+        android:layout_marginBottom="73dp"
+        android:layout_above="@+id/buttonSignUP"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="200dp" />
 
-</RelativeLayout>
+    <ImageView
+        app:srcCompat="@drawable/role_user"
+        android:layout_marginBottom="85dp"
+        android:id="@+id/imageView5"
+        android:layout_height="120dp"
+        android:layout_width="120dp"
+        android:layout_above="@+id/buttonSignIN"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="80dp" />
+
+
+</FrameLayout>

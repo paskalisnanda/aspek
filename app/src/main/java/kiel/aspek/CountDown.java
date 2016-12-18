@@ -45,16 +45,9 @@ public class CountDown extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 countdowntimer.cancel();
-                Toast toast = Toast.makeText (getApplicationContext(), "Pesanan Dibatalkan:", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText (getApplicationContext(), "Pesanan Dibatalkan", Toast.LENGTH_LONG);
                 toast.show();
-                Intent intentCancel=new Intent(getApplicationContext(),SelectDeparture.class);
-                Bundle informasi = new Bundle();
-                informasi.putString("userName",userName);
-                informasi.putString("password",password);
-                informasi.putString("asal",asal);
-                intentCancel.putExtras(informasi);
-                startActivity(intentCancel);
-
+                finish();
                 //tinggal masukin fungsi delete di sini
             }
         });
@@ -86,5 +79,11 @@ public class CountDown extends AppCompatActivity {
             //tinggal masukin fungsi delete di sini
 
         }
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+
     }
 }

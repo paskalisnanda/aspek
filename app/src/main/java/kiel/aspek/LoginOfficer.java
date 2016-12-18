@@ -67,7 +67,21 @@ public class LoginOfficer extends AppCompatActivity
 
 // check if the Stored password matches with Password entered by user
                // if(password.equals(storedPassword))
-                if(password.equals("1234"))
+                if(userName.equals("Nanda") && password.equals("1234"))
+                {
+                    Toast.makeText(LoginOfficer.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                    Intent Officermenu=new Intent(getApplicationContext(),OfficerMenu.class);
+                    startActivity(Officermenu);
+                }
+                else if(userName.equals("Kristofer") && password.equals("1234"))
+                {
+                    Toast.makeText(LoginOfficer.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                    Intent Officermenu=new Intent(getApplicationContext(),OfficerMenu.class);
+                    startActivity(Officermenu);
+                }
+                else if(userName.equals("Aqsha") && password.equals("1234"))
                 {
                     Toast.makeText(LoginOfficer.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
                     dialog.dismiss();

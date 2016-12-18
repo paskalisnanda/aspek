@@ -38,6 +38,7 @@ public class SelectDeparture extends AppCompatActivity implements OnItemSelected
 
         // Spinner Drop down elements
         List<String> shelter = new ArrayList<String>();
+        shelter.add("Pilih Halte");
         shelter.add("PAU");
         shelter.add("Perpustakaan");
         shelter.add("FIB");
@@ -72,7 +73,10 @@ public class SelectDeparture extends AppCompatActivity implements OnItemSelected
         shelter = parent.getItemAtPosition(position).toString();
 
         // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + shelter, Toast.LENGTH_LONG).show();
+        if (!shelter.equals("Pilih Halte")){
+            Toast.makeText(parent.getContext(), "Selected: " + shelter, Toast.LENGTH_LONG).show();
+        }
+
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub

@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:textIsSelectable="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/scan_format" />
+        android:layout_below="@+id/scan_format"
+        android:textColor="@color/colorAccent" />
 
     <TextView
         android:id="@+id/scan_format"
@@ -27,7 +28,8 @@
         android:layout_marginTop="47dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorAccent" />
 
     <Button
         android:id="@+id/scan_button"

@@ -42,6 +42,7 @@ public class SelectDestination extends AppCompatActivity implements OnItemSelect
 
         // Spinner Drop down elements
         List<String> shelter = new ArrayList<String>();
+        shelter.add("Pilih Halte");
         shelter.add("PAU");
         shelter.add("Perpustakaan");
         shelter.add("FIB");
@@ -66,6 +67,7 @@ public class SelectDestination extends AppCompatActivity implements OnItemSelect
         // Spinner click listener
         spinner2.setOnItemSelectedListener(this);
         List<String> NomorSepeda = new ArrayList<String>();
+        NomorSepeda.add("Pilh Nomor Sepeda");
         NomorSepeda.add("1");
         NomorSepeda.add("2");
         NomorSepeda.add("3");
@@ -118,16 +120,18 @@ public class SelectDestination extends AppCompatActivity implements OnItemSelect
             // On selecting a spinner item
             shelter = parent.getItemAtPosition(position).toString();
 
-            // Showing selected spinner item
-            Toast.makeText(parent.getContext(), "Selected: " + shelter, Toast.LENGTH_LONG).show();
+            if (!shelter.equals("Pilih Halte")){
+                Toast.makeText(parent.getContext(), "Selected: " + shelter, Toast.LENGTH_LONG).show();
+            }
         }
         else if(spinner.getId() == R.id.spinnerBike)
         {
             // On selecting a spinner item
             bike = parent.getItemAtPosition(position).toString();
 
-            // Showing selected spinner item
-            Toast.makeText(parent.getContext(), "Selected: " + bike, Toast.LENGTH_LONG).show();
+            if (!bike.equals("Pilh Nomor Sepeda")){
+                Toast.makeText(parent.getContext(), "Selected: " + bike, Toast.LENGTH_LONG).show();
+            }
         }
     }
 

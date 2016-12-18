@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         btnHelp.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent user_manual = new Intent(getApplicationContext(), user_manual.class);
+                Intent user_manual = new Intent(getApplicationContext(), UserManual2.class);
                 startActivity(user_manual);
             }
         });

@@ -69,7 +69,29 @@ public class LoginStudent extends AppCompatActivity{
 
 // check if the Stored password matches with Password entered by user
                 // if(password.equals(storedPassword))
-                if(password.equals("1234"))
+                if(userName.equals("Nanda") && password.equals("1234"))
+                {
+                    Toast.makeText(LoginStudent.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                    Intent selectdeparture=new Intent(LoginStudent.this,SelectDeparture.class);
+                    Bundle loginInfo = new Bundle();
+                    loginInfo.putString("userName",userName);
+                    loginInfo.putString("password",password);
+                    selectdeparture.putExtras(loginInfo);
+                    startActivity(selectdeparture);
+                }
+                else if(userName.equals("Kristofer") && password.equals("1234"))
+                {
+                    Toast.makeText(LoginStudent.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                    Intent selectdeparture=new Intent(LoginStudent.this,SelectDeparture.class);
+                    Bundle loginInfo = new Bundle();
+                    loginInfo.putString("userName",userName);
+                    loginInfo.putString("password",password);
+                    selectdeparture.putExtras(loginInfo);
+                    startActivity(selectdeparture);
+                }
+                else if(userName.equals("Aqsha") && password.equals("1234"))
                 {
                     Toast.makeText(LoginStudent.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
                     dialog.dismiss();
