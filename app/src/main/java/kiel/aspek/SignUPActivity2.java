@@ -11,7 +11,7 @@ import android.widget.Toast;
 import android.database.sqlite.SQLiteDatabase;
 
 
-public class SignUPActivity extends AppCompatActivity
+public class SignUPActivity2 extends AppCompatActivity
 {
     EditText editTextUserName,editTextNPM,editTextPassword,editTextConfirmPassword,editTextEmail;
     Button btnCreateAccount;
@@ -81,7 +81,7 @@ public class SignUPActivity extends AppCompatActivity
 // TODO Auto-generated method stub
         super.onDestroy();
 
-        loginDataBaseAdapter.close();
+        //loginDataBaseAdapter.close();
     }
 }
 

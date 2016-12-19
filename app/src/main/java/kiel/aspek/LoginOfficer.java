@@ -36,7 +36,7 @@ public class LoginOfficer extends AppCompatActivity
 // TODO Auto-generated method stub
 
 /// Create Intent for SignUpActivity abd Start The Activity
-                Intent intentSignUP=new Intent(getApplicationContext(),SignUPActivity.class);
+                Intent intentSignUP=new Intent(getApplicationContext(),SignUPActivity2.class);
                 startActivity(intentSignUP);
             }
         });

@@ -27,7 +27,8 @@
         <activity android:name=".Receive_bike" />
         <activity android:name=".SelectShelter" />
         <activity android:name=".UserManual2" />
-        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".SplashScreen" />
+        <activity android:name=".SignUPActivity2"></activity>
     </application>
 
 </manifest>
